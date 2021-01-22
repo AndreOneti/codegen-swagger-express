@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 
-const { magenta, yellow, green, red, cyan } = require('chalk');
+const { magenta, yellow, green, red } = require('chalk');
 const program = require('commander');
-const figlet = require('figlet');
 const path = require('path');
 
 const packageInfo = require('./package.json');
@@ -11,8 +10,6 @@ const codegen = require('./lib/codegen');
 let swaggerFile;
 
 const parseOutput = dir => path.resolve(dir);
-
-console.log(cyan(figlet.textSync(packageInfo.name)));
 
 program
   .version(packageInfo.version)
